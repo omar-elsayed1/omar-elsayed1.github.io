@@ -25,8 +25,9 @@ export function About() {
                 Data Analysis is my current focus; Data Engineering is where I&rsquo;m headed long-term.
               </p>
               <p className="text-paper-400">
-                I&rsquo;m currently open to freelance projects &mdash; particularly Power BI dashboards, Excel
-                data cleaning, and SQL-based analysis.
+                I&rsquo;m building my career through practical, real-world projects rather than waiting until
+                everything feels finished &mdash; and I&rsquo;m currently open to freelance work, particularly
+                Power BI dashboards, Excel data cleaning, and SQL-based analysis.
               </p>
             </div>
           </div>

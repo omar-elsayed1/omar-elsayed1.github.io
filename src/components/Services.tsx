@@ -1,9 +1,9 @@
-import { Database, FileSpreadsheet, LayoutDashboard, LineChart, Sparkles } from 'lucide-react'
+import { Database, FileSpreadsheet, LayoutDashboard, Sparkles } from 'lucide-react'
 import { Container, SectionHeading } from './ui'
 import { services } from '../data/services'
 import { workflowSteps } from '../data/profile'
 
-const icons = [LayoutDashboard, FileSpreadsheet, Sparkles, Database, LineChart]
+const icons = [LayoutDashboard, Database, FileSpreadsheet, Sparkles]
 
 export function Services() {
   return (
@@ -23,7 +23,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => {
             const Icon = icons[i % icons.length]
             return (

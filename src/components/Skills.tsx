@@ -2,7 +2,7 @@ import { Container, SectionHeading } from './ui'
 import { skillGroups } from '../data/skills'
 
 const levelStyles: Record<string, string> = {
-  core: 'border-gold-500/50 bg-ink-900 lg:col-span-2',
+  core: 'border-gold-500/50 bg-ink-900 lg:col-span-3',
   strong: 'border-ink-700 bg-ink-900',
   growing: 'border-ink-800 bg-ink-900/60',
 }

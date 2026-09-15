@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github, MapPin } from 'lucide-react'
 import { Container } from './ui'
 import { profile } from '../data/profile'
+import profilePhoto from '../assets/profile-photo.jpg'
 
 export function Hero() {
   return (
@@ -28,13 +29,13 @@ export function Hero() {
           <h1 className="max-w-xl font-display leading-[1.1]">
             <span className="block text-2xl font-medium text-paper-400 sm:text-3xl">Hi, I&rsquo;m Omar.</span>
             <span className="mt-1 block text-4xl font-semibold text-paper-100 sm:text-5xl lg:text-[3.25rem]">
-              Data Analyst turning data into decisions.
+              Data Analyst turning raw data into clear, actionable insights.
             </span>
           </h1>
 
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-paper-400">
-            I transform raw data into clean analysis, interactive Power BI dashboards, and clear business
-            insights &mdash; using Power BI, SQL, Excel, and Python.
+            Specializing in Power BI, SQL, Excel and Python &mdash; cleaning messy data, modeling it, and
+            presenting it through interactive dashboards and business reporting.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -74,9 +75,32 @@ export function Hero() {
           </div>
         </div>
 
-        <AnalyticsPanel />
+        <div className="flex flex-col gap-5">
+          <PhotoCard />
+          <AnalyticsPanel />
+        </div>
       </Container>
     </section>
+  )
+}
+
+function PhotoCard() {
+  return (
+    <div className="mx-auto flex w-full max-w-md items-center gap-4 rounded-xl border border-ink-700 bg-ink-900 p-5 shadow-2xl shadow-black/40">
+      <img
+        src={profilePhoto}
+        alt="Portrait of Omar Elsayed Mokhtar"
+        className="h-24 w-24 shrink-0 rounded-lg border border-ink-600 object-cover sm:h-28 sm:w-28"
+      />
+      <div className="min-w-0">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-gold-400" />
+          <span className="truncate text-sm font-medium text-paper-100">Omar Elsayed Mokhtar</span>
+        </div>
+        <p className="mt-1 text-xs text-paper-500">{profile.title}</p>
+        <p className="mt-2.5 text-sm text-paper-400">{profile.location}</p>
+      </div>
+    </div>
   )
 }
 

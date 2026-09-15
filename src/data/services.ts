@@ -4,26 +4,21 @@ export const services: Service[] = [
   {
     title: 'Power BI Dashboard Development',
     description:
-      'I transform raw Excel or CSV data into interactive Power BI dashboards with KPIs, visualizations, slicers and a professional layout.',
-  },
-  {
-    title: 'Excel Data Cleaning & Analysis',
-    description:
-      'I clean, organize and standardize messy Excel datasets, then analyze them and summarize what the data is actually saying.',
-  },
-  {
-    title: 'Power BI Data Cleaning & KPI Reporting',
-    description:
-      'I use Power Query and DAX to prepare raw data and build KPI-driven reports that stay accurate as filters change.',
+      'Transform raw business data into interactive dashboards with KPIs, filters and clear visual storytelling.',
   },
   {
     title: 'SQL Data Analysis',
     description:
-      'I use SQL and MySQL to query, clean, aggregate and analyze structured datasets to answer specific business questions.',
+      'Query, clean, aggregate and analyze structured datasets in SQL/MySQL to answer specific business questions.',
   },
   {
-    title: 'Data Visualization & Reporting',
+    title: 'Excel Reporting & Analysis',
     description:
-      'I turn complex datasets into clear visual reports that make important trends and patterns easier to see and act on.',
+      'Build clear, reliable Excel reports — pivot tables, summaries and analysis you can hand straight to stakeholders.',
+  },
+  {
+    title: 'Data Cleaning & Preparation',
+    description:
+      'Take messy, inconsistent raw data and turn it into a clean, structured dataset that\u2019s ready for analysis.',
   },
 ]

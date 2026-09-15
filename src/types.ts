@@ -6,15 +6,14 @@ export interface SkillGroup {
 }
 
 export interface ProjectCaseStudy {
-  problem: string
-  dataset: string
-  cleaning: string
-  transformation: string
-  modeling: string
-  measures: string
-  dashboard: string
-  interactivity: string
-  insights: string
+  challenge: string
+  data: string
+  questions: string
+  approach: string
+  analysis: string
+  solution: string
+  outcome: string
+  learned: string
 }
 
 export interface ProjectScreenshot {
@@ -43,7 +42,6 @@ export interface Project {
   stats: ProjectStat[]
   screenshots: ProjectScreenshot[]
   caseStudy: ProjectCaseStudy
-  learned: string
 }
 
 export interface Service {

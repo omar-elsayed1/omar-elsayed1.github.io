@@ -4,15 +4,13 @@ import { Tag } from './ui'
 import type { Project } from '../types'
 
 const sections: { key: keyof Project['caseStudy']; label: string }[] = [
-  { key: 'problem', label: 'The problem' },
-  { key: 'dataset', label: 'Dataset' },
-  { key: 'cleaning', label: 'Data cleaning' },
-  { key: 'transformation', label: 'Data transformation' },
-  { key: 'modeling', label: 'Data modeling' },
-  { key: 'measures', label: 'DAX / measures' },
-  { key: 'dashboard', label: 'Dashboard design' },
-  { key: 'interactivity', label: 'Interactive features' },
-  { key: 'insights', label: 'Intended analytical use' },
+  { key: 'challenge', label: 'Challenge' },
+  { key: 'data', label: 'Data' },
+  { key: 'questions', label: 'Questions I Investigated' },
+  { key: 'approach', label: 'Approach' },
+  { key: 'analysis', label: 'Analysis' },
+  { key: 'solution', label: 'Solution' },
+  { key: 'outcome', label: 'Outcome' },
 ]
 
 export function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
@@ -110,7 +108,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
 
           <div className="rounded-lg border border-ink-700 bg-ink-800/50 p-5">
             <h3 className="text-sm font-medium text-paper-200">What I learned</h3>
-            <p className="mt-1.5 leading-relaxed text-paper-400">{project.learned}</p>
+            <p className="mt-1.5 leading-relaxed text-paper-400">{project.caseStudy.learned}</p>
           </div>
 
           {project.githubUrl ? (

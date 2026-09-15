@@ -1,59 +1,33 @@
 import type { SkillGroup } from '../types'
 
-// Order reflects real proficiency: Power BI -> Excel -> SQL -> Data Cleaning ->
-// Data Visualization -> Python/Pandas. Edit `level` to adjust the visual weight
-// given to a group ('core' gets the most visual emphasis).
+// Categories match the requested structure. `level` drives the visual weight:
+// 'core' gets the most emphasis (Business Intelligence — Power BI is the
+// strongest skill), 'strong' is solid working knowledge, 'growing' is
+// deliberately kept smaller — Data Engineering Foundations and Machine
+// Learning are future direction / secondary, not the primary service.
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Business Intelligence',
     description: 'Where I spend most of my time — building dashboards clients actually use.',
     level: 'core',
-    skills: [
-      'Power BI',
-      'DAX',
-      'Power Query',
-      'Power Pivot',
-      'Dashboard Development',
-      'KPI Dashboards',
-      'Data Modeling',
-    ],
-  },
-  {
-    title: 'Spreadsheets',
-    description: 'Where most raw client data starts, and where a lot of cleanup happens.',
-    level: 'strong',
-    skills: ['Microsoft Excel', 'Pivot Tables', 'Power Query', 'Power Pivot', 'Excel Data Analysis'],
-  },
-  {
-    title: 'Databases',
-    description: 'For pulling answers directly out of structured data.',
-    level: 'strong',
-    skills: ['SQL', 'MySQL', 'SQL Data Analysis', 'Querying', 'Aggregation', 'Joins'],
+    skills: ['Power BI', 'DAX', 'Power Query', 'Power Pivot', 'Excel', 'Data Visualization'],
   },
   {
     title: 'Data Analysis',
-    description: 'The thinking underneath every dashboard.',
+    description: 'The querying and scripting layer underneath the dashboards.',
     level: 'strong',
-    skills: [
-      'Data Cleaning',
-      'Data Transformation',
-      'Exploratory Data Analysis',
-      'Statistical Analysis',
-      'KPI Analysis',
-      'Business Insights',
-      'Data Visualization',
-    ],
+    skills: ['SQL', 'MySQL', 'Python', 'Pandas', 'NumPy', 'Exploratory Data Analysis', 'Statistical Analysis'],
   },
   {
-    title: 'Programming',
-    description: 'For analysis that spreadsheets and BI tools alone can\u2019t handle.',
+    title: 'Data Engineering Foundations',
+    description: 'The direction I\u2019m building toward, applied so far through project work.',
     level: 'growing',
-    skills: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'Keras'],
+    skills: ['ETL', 'Data Modeling', 'Star Schema', 'Data Warehousing'],
   },
   {
-    title: 'Other Tools',
-    description: '',
+    title: 'Machine Learning',
+    description: 'Used to extend an analysis, not a primary service on its own.',
     level: 'growing',
-    skills: ['Git', 'GitHub', 'Microsoft Office'],
+    skills: ['Scikit-Learn', 'Keras'],
   },
 ]

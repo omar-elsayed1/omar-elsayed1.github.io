@@ -6,9 +6,8 @@ export const profile = {
   location: 'Cairo, Egypt',
   linkedinUrl: 'https://linkedin.com/in/omar-soliman-23a33b357',
   githubUrl: 'https://github.com/omar-elsayed1',
-  // No email address was provided — keep this null and show a
-  // "connect a backend to enable this form" notice instead of inventing one.
-  email: null as string | null,
+  email: 'omarelsayedo500@outlook.sa',
+  formspreeEndpoint: 'https://formspree.io/f/xljdrdez',
 }
 
 export const education = {
