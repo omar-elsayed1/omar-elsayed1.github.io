@@ -1,51 +1,84 @@
 import type { Certification, TrainingProgram } from '../types'
 
+// Exactly 8 certificates, in this exact order. Each links to its real PDF
+// (public/assets/certificates/), verified against the PDF's own text content.
+// "Python Basics" and the 3 individual Coursera courses (Supervised ML,
+// Advanced Learning Algorithms, Unsupervised Learning) are intentionally
+// excluded — no certificate PDF was provided for them.
 export const certifications: Certification[] = [
   {
-    name: 'CS50P — Introduction to Programming with Python',
-    provider: 'Harvard University / edX',
-    date: 'December 2025',
-    focus: 'My first major certificate — it built my Python foundation.',
-  },
-  {
-    name: 'Power BI Specialist — Certificate of Achievement',
+    id: 'depi-power-bi',
+    name: 'Analyzing and Visualizing Data with Microsoft Power BI',
     provider: 'DEPI (Digital Egypt Pioneers Initiative)',
     date: 'January 2026',
-    focus: 'Power BI / Data Analysis',
+    description: 'Training focused on analyzing and visualizing data using Microsoft Power BI.',
+    skills: ['Data Analysis', 'Data Cleaning', 'Power BI'],
+    pdfPath: '/assets/certificates/depi-power-bi.pdf',
   },
   {
-    name: 'Python Basics',
-    provider: 'Mahara Tech',
-    date: 'January 2026',
+    id: 'python-data-fundamentals',
+    name: 'Python Data Fundamentals',
+    provider: 'DataCamp',
+    date: 'September 2026',
+    description:
+      'Practical Python skills for data analysis: pandas data manipulation and joins, Seaborn visualization, statistics in Python, and exploratory data analysis.',
+    pdfPath: '/assets/certificates/python-data-fundamentals.pdf',
   },
   {
+    id: 'introduction-to-sql',
     name: 'Introduction to SQL',
     provider: 'Simplilearn',
-    date: '',
-    focus: 'SQL / MySQL fundamentals',
+    date: 'January 2026',
+    description: 'Foundational SQL concepts and MySQL.',
+    skills: ['SQL', 'MySQL'],
+    credentialId: '9833591',
+    pdfPath: '/assets/certificates/introduction-to-sql.pdf',
   },
   {
-    name: 'Excel',
-    provider: 'Simplilearn',
-    date: '',
-    focus: 'Excel and data analysis',
+    id: 'machine-learning',
+    name: 'Machine Learning',
+    provider: 'DeepLearning.AI',
+    date: 'July 2026',
+    description:
+      'Stanford Online & DeepLearning.AI specialization covering supervised and unsupervised learning, recommender systems, neural networks and model evaluation — built with Python, NumPy and Scikit-Learn.',
+    credentialId: '8O0U01WV8OJ2',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/certificate/8O0U01WV8OJ2',
+    pdfPath: '/assets/certificates/machine-learning.pdf',
   },
   {
+    id: 'practical-machine-learning',
     name: 'Practical Machine Learning for Data Scientists',
-    provider: 'Mahara Tech',
-    date: '',
+    provider: 'Information Technology Institute (ITI)',
+    date: 'February 2026',
+    credentialId: 'GwifHDDGy2',
+    pdfPath: '/assets/certificates/practical-machine-learning.pdf',
   },
   {
-    name: 'Machine Learning Specialization (in progress)',
-    provider: 'Coursera / DeepLearning.AI (Andrew Ng)',
-    date: '',
-    focus: 'Completed the first course, currently in the second.',
+    id: 'cs50p',
+    name: 'Introduction to Programming Using Python',
+    provider: 'Harvard University',
+    date: 'January 2026',
+    description: 'Harvard\u2019s CS50P — nine problem sets and a final project.',
+    credentialUrl: 'https://cs50.harvard.edu/certificates/54d1ef82-7bf2-4d18-83c3-6d050f21a2ed',
+    pdfPath: '/assets/certificates/cs50p.pdf',
   },
   {
-    name: 'Data Science Committee — Certificate',
+    id: 'ieee-data-science',
+    name: 'Data Science Committee Member',
     provider: 'IEEE Kafr Elsheikh Student Branch',
-    date: '2025–2026 season',
-    focus: 'Pandas, NumPy, Data Science',
+    date: 'February 2026',
+    description: 'Committee membership, not a technical course certificate.',
+    skills: ['Data Science', 'NumPy'],
+    pdfPath: '/assets/certificates/ieee-data-science.pdf',
+  },
+  {
+    id: 'build-with-ai-masr',
+    name: 'Build with AI: MASR EDITION',
+    provider: 'Information Technology Institute (ITI)',
+    date: 'June 2026',
+    description:
+      'Sessions on the AI development lifecycle — moving models from codebase to production with Generative AI, LLMs and Google Cloud, by Google for Developers and ITI.',
+    pdfPath: '/assets/certificates/build-with-ai-masr.pdf',
   },
 ]
 

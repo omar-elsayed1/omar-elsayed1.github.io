@@ -50,10 +50,15 @@ export interface Service {
 }
 
 export interface Certification {
+  id: string
   name: string
   provider: string
   date: string
-  focus?: string
+  description?: string
+  skills?: string[]
+  credentialId?: string
+  credentialUrl?: string
+  pdfPath: string
 }
 
 export interface TrainingProgram {

@@ -14,7 +14,7 @@ export const education = {
   school: 'Kafr Elsheikh University',
   degree: 'B.Sc. in Artificial Intelligence',
   period: 'October 2024 – June 2028',
-  gpa: '3.32 CGPA',
+  gpa: '3.35 CGPA',
 }
 
 export const workflowSteps = ['Raw Data', 'Clean Data', 'Analysis', 'Dashboard', 'Insights']
