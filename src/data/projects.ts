@@ -14,6 +14,11 @@ import railwayMl from '../assets/projects/uk-railway/ml-insights.png'
 import marketOverview from '../assets/projects/market-store/market-overview.png'
 import storesPerformance from '../assets/projects/market-store/stores-performance.png'
 
+import usedCarsTransmission from '../assets/projects/used-cars/price-by-transmission.png'
+import usedCarsAgeRegression from '../assets/projects/used-cars/car-age-regression.png'
+import usedCarsFuel from '../assets/projects/used-cars/price-by-fuel.png'
+import usedCarsCorrelation from '../assets/projects/used-cars/correlation-heatmap.png'
+
 // Order matters: this is the exact order the projects should appear in.
 // Global Sales Analytics is the flagship project (newest, most visually developed).
 // GitHub URLs and screenshots are pulled directly from omar-elsayed1's public repos —
@@ -203,6 +208,53 @@ export const projects: Project[] = [
         'The report shows that, across 2,015+ tracked startups, HealthTech leads by type with an average company size around 502 employees. On the store side, total revenue reached $70.23M against $5.10M in marketing spend — an average ROI of 12.76x — with Utah leading the top-10 states by revenue.',
       learned:
         'Designing two connected pages that had to feel like one report taught me a lot about keeping formatting, DAX measures and navigation consistent across a multi-page dashboard.',
+    },
+  },
+  {
+    id: 'used-cars-price-market-analysis',
+    index: 5,
+    name: 'Used Cars Price & Market Analysis',
+    tagline: 'A Python analysis of used car listings: cleaning, EDA, statistical testing and regression.',
+    description:
+      'A Python-based analysis of used car data, combining data cleaning, exploratory analysis, statistical testing, regression, visualization, and business-oriented insights into vehicle pricing.',
+    tools: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'SciPy', 'Statsmodels'],
+    featured: false,
+    githubUrl: 'https://github.com/omar-elsayed1/Used_Cars_Python_Analysis',
+    theme: { accentClass: 'gold' },
+    highlights: [
+      'Structured workflow: data inspection, EDA, statistical analysis and executive conclusions',
+      'Reusable Python modules for loading, validating, cleaning and feature engineering',
+      'Welch\u2019s t-test, Cohen\u2019s d, Pearson correlation and simple linear regression',
+      'Findings framed as associations in this dataset, not causal effects',
+    ],
+    stats: [
+      { label: 'Cleaned Records', value: '3,577' },
+      { label: 'Age\u2013Price Correlation', value: 'r \u2248 \u22120.42' },
+      { label: 'Age Regression R\u00b2', value: '\u2248 0.18' },
+      { label: 'Auto vs Manual (Cohen\u2019s d)', value: '\u2248 1.97' },
+    ],
+    screenshots: [
+      { src: usedCarsTransmission, alt: 'Used Cars analysis median selling price by transmission type' },
+      { src: usedCarsAgeRegression, alt: 'Used Cars analysis car age versus selling price regression' },
+      { src: usedCarsFuel, alt: 'Used Cars analysis median selling price by fuel type' },
+      { src: usedCarsCorrelation, alt: 'Used Cars analysis correlation matrix of numerical features' },
+    ],
+    caseStudy: {
+      challenge:
+        'Used car prices depend on many things at once. I wanted to work through a real listings dataset in Python and find out which factors show the clearest relationship with selling price, using statistical tests rather than eyeballing charts.',
+      data: 'A used car listings dataset (Car Dekho) with vehicle name, year, selling price, kilometers driven, fuel type, seller type, transmission and owner history. After cleaning, 3,577 records remained, covering vehicle years 1992\u20132020.',
+      questions:
+        'How does vehicle age relate to selling price? Is there a significant price difference between automatic and manual cars? How do fuel type and kilometers driven fit in? And how much of the variation in price can car age alone account for?',
+      approach:
+        'I followed a notebook workflow backed by a small Python package: data inspection and validation, then cleaning (stripping whitespace and removing exact duplicate rows) and feature engineering (a car_age feature), then exploratory analysis, statistical analysis and executive conclusions. The repo also includes tests for the data pipeline.',
+      analysis:
+        'I measured the correlation between car age and price, compared automatic and manual prices with Welch\u2019s t-test and Cohen\u2019s d, and fitted a simple linear regression of price on car age. I also compared price across fuel types and checked how the numeric features relate to each other.',
+      solution:
+        'The result is a reproducible analysis workflow split across four notebooks (inspection, exploratory analysis, statistical analysis and executive conclusions), with the reusable logic kept in a Python package and the key charts saved as project visuals.',
+      outcome:
+        'Car age has a moderate negative correlation with price (r \u2248 \u22120.42). In the simple regression, each additional year of vehicle age was associated with an estimated \u20b950.8K lower selling price, though age alone explains only about 18% of price variation (R\u00b2 \u2248 0.18). Automatic cars averaged a much higher price than manual cars (Welch\u2019s t-test p \u2248 1.13e-30, Cohen\u2019s d \u2248 1.97), but automatics are only 312 of 3,577 listings, and these are associations rather than proof of cause.',
+      learned:
+        'This project taught me to report effect sizes and sample sizes alongside p-values, and to be careful about wording: a significant result and a strong-looking chart describe a pattern in the data, not a cause, and a simple regression leaves a lot of the story unexplained.',
     },
   },
 ]
